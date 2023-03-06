@@ -54,6 +54,9 @@
             <div class="col-md-1">
                 <button @onclick="NegativeNumber" class="btn btn-info">N</button>
             </div>
+            <div class="col-md-1">
+                <button @onclick="CleanNumbers" class="btn btn-info">C</button>
+            </div>
         </div>
     
     </div>
@@ -69,6 +72,16 @@
     width: 500px;
     display: flex;
     justify-content: center;
+    margin-top:10px;
+    }
+
+    .row {
+        height: 100px; /*set height*/
+        border: 2px solid blue;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-left: 1px;
+        padding: 10px;
     }
     
 </style>
@@ -112,7 +125,7 @@
         {
             throw new ArgumentNullException("Null", e);
         }
-        
+
     }
     void NegativeNumber()
     {
@@ -126,6 +139,12 @@
         {
             throw new ArgumentNullException("Null", e);
         }
-        
+
+    }
+    void CleanNumbers()
+    {
+        num1 = "";
+        num2 = "";
+        finalresult = "";
     }
 }
